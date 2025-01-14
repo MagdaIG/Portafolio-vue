@@ -21,6 +21,7 @@ export default {
   name: "App",
   components: {
     Navbar,
+    // eslint-disable-next-line vue/no-reserved-component-names
     Footer,
   },
 };

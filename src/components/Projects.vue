@@ -18,7 +18,7 @@
             :data-aos-delay="index * 200"
         >
           <div class="project-card">
-            <img :src="`/src/assets/images/${project.image}`" :alt="project.name" class="project-image" />
+            <img :src="require(`@/assets/images/${project.image}`)" :alt="project.name" class="project-image" />
             <div class="project-content">
               <h5 class="project-title highlight">{{ project.name }}</h5>
               <p class="project-description">{{ project.description }}</p>
@@ -35,6 +35,7 @@
 
 <script>
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: "Projects",
   data() {
     return {

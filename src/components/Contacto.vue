@@ -13,7 +13,7 @@
           <div class="envelope-flap"></div>
           <div class="envelope-body">
             <div class="heart-icon">
-              <i class="fas fa-heart"></i>
+              <FontAwesomeIcon :icon="['fas', 'heart']" />
             </div>
             <p class="letter-text">¡Haz clic para contactarme!</p>
           </div>
@@ -78,22 +78,22 @@
           <div class="contact-card shadow contact-info-card">
             <div class="text-center">
               <img
-                  src="/src/assets/images/mi-foto2.jpeg"
+                  src="@/assets/images/mi-foto2.jpeg"
                   alt="Magdalena Inalaf"
                   class="contact-photo mb-4"
               />
               <h3 class="contact-title">Magdalena Inalaf G.</h3>
               <ul class="contact-info list-unstyled">
                 <li>
-                  <i class="fab fa-linkedin icon"></i>
+                  <span class="icon"> <FontAwesomeIcon :icon="['fab', 'linkedin']" /></span>
                   <a href="https://www.linkedin.com/in/minalaf/" target="_blank">LinkedIn</a>
                 </li>
                 <li>
-                  <i class="fab fa-github icon"></i>
+                  <span class="icon"><FontAwesomeIcon :icon="['fab', 'github']" /></span>
                   <a href="https://github.com/MagdaIG" target="_blank">GitHub</a>
                 </li>
                 <li>
-                  <i class="fas fa-envelope icon"></i>
+                  <span class="icon"><FontAwesomeIcon :icon="['fas', 'envelope']" /></span>
                   <a href="mailto:magda.inalaf@gmail.com">Magda.inalaf@gmail.com</a>
                 </li>
               </ul>
@@ -106,7 +106,10 @@
 </template>
 
 <script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: "Contacto",
   data() {
     return {
@@ -118,6 +121,9 @@ export default {
       this.isOpen = true;
     },
   },
+  components: {
+    FontAwesomeIcon,
+  }
 };
 </script>
 

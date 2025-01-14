@@ -15,7 +15,7 @@
         >
           <div class="card-content">
             <div class="icon-container">
-              <img :src="`/src/assets/icons/${skill.icon}`" :alt="skill.name" />
+              <img :src="require(`@/assets/icons/${skill.icon}`)" :alt="skill.name" />
             </div>
             <h5 class="skill-name">{{ skill.name }}</h5>
           </div>
@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: "Skills",
   data() {
     return {

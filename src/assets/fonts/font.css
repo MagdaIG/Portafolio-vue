@@ -1,7 +1,4 @@
 @font-face {
-    font-family: 'TuFuente';
-    src: url('./tu-fuente.woff2') format('woff2'),
-    url('./tu-fuente.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

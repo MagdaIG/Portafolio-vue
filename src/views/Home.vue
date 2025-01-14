@@ -1,3 +1,25 @@
+<script>
+import Skills from "@/components/Skills.vue";
+import Projects from "@/components/Projects.vue";
+import ExperienceAndEducation from "@/components/ExperienceAndEducation.vue";
+import Servicios from "@/components/Servicios.vue";
+import Contacto from "@/components/Contacto.vue";
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+export default {
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Home",
+  components: {
+    FontAwesomeIcon,
+    Skills,
+    Projects,
+    ExperienceAndEducation,
+    Servicios,
+    Contacto,
+  },
+};
+</script>
+
 <template>
   <div class="home">
     <!-- Sección Hero -->
@@ -25,7 +47,7 @@
             </p>
             <div class="buttons-container">
               <a
-                  href="/src/assets/Magdalena-Inalaf-González-CV-espanol.pdf"
+                  href="/certificates/CV.pdf"
                   download
                   class="btn btn-morado btn-lg"
               >
@@ -36,21 +58,22 @@
                   target="_blank"
                   class="btn btn-outline-morado btn-lg icon-button"
               >
-                <i class="fab fa-github"></i>
+
+                <FontAwesomeIcon :icon="['fab', 'github']" />
               </a>
               <a
                   href="https://www.linkedin.com/in/minalaf/"
                   target="_blank"
                   class="btn btn-outline-morado btn-lg icon-button"
               >
-                <i class="fab fa-linkedin"></i>
+                <FontAwesomeIcon :icon="['fab', 'linkedin']" />
               </a>
             </div>
           </div>
           <!-- Columna de imagen -->
           <div class="col-md-6 text-center">
             <div class="hero-image-container">
-              <img src="/src/assets/images/mi-foto.jpeg" alt="Magdalena" class="hero-image" />
+              <img src="@/assets/images/mi-foto.jpeg" alt="Magdalena" class="hero-image" />
             </div>
           </div>
         </div>
@@ -85,24 +108,6 @@
 </template>
 
 
-<script>
-import Skills from "@/components/Skills.vue";
-import Projects from "@/components/Projects.vue";
-import ExperienceAndEducation from "@/components/ExperienceAndEducation.vue";
-import Servicios from "@/components/Servicios.vue";
-import Contacto from "@/components/Contacto.vue";
-
-export default {
-  name: "Home",
-  components: {
-    Skills,
-    Projects,
-    ExperienceAndEducation,
-    Servicios,
-    Contacto,
-  },
-};
-</script>
 
 <style scoped>
 /* Sección Hero */

@@ -62,7 +62,7 @@
             <div class="certificate-card text-center">
               <h5 class="certificate-title">{{ certificate.name }}</h5>
               <a
-                  :href="`/src/assets/certificates/${certificate.file}`"
+                  :href="`/certificates/${certificate.file}`"
                   download
                   class="btn btn-morado btn-lg mt-3"
               >
@@ -111,7 +111,7 @@ export default {
         },
         {
           name: "Diseño y Programación WEB",
-          file: "Diplomado-Certificado-AIEP-(1).pdf",
+          file: "Diplomado-Certificado-AIEP.pdf",
         },
         {
           name: "Programación Orientada a Objetos",
