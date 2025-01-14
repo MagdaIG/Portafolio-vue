@@ -1,0 +1,27 @@
+{
+  "name": "gestor-portafolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "bootstrap": "^5.3.0",
+    "gsap": "^3.12.2",
+    "vite": "^6.0.7",
+    "vue": "^3.5.13",
+    "vue-router": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.47.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "gh-pages": "^4.0.0",
+    "postcss": "^8.4.49"
+  }
+}
