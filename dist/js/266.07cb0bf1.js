@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkgestor_portafolio"]=self["webpackChunkgestor_portafolio"]||[]).push([[266],{3266:(e,o,s)=>{s.r(o),s.d(o,{default:()=>d});var a=s(6768),n={class:"about"};function r(e,o,s,r,t,c){return(0,a.uX)(),(0,a.CE)("div",n,o[0]||(o[0]=[(0,a.Lk)("h1",null,"Acerca de Mí",-1),(0,a.Lk)("p",null,"Esta es una sección donde puedes conocer más sobre mí.",-1)]))}const t={name:"About"};var c=s(1241);const u=(0,c.A)(t,[["render",r],["__scopeId","data-v-f63dd578"]]),d=u}}]);
+//# sourceMappingURL=266.07cb0bf1.js.map
