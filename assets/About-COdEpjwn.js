@@ -1,0 +1,1 @@
+import{_ as s,c as a,a as o,o as t}from"./index-ByDbP9Xs.js";const c={name:"About"},n={class:"about"};function r(d,e,p,u,_,l){return t(),a("div",n,e[0]||(e[0]=[o("h1",null,"Acerca de Mí",-1),o("p",null,"Esta es una sección donde puedes conocer más sobre mí.",-1)]))}const m=s(c,[["render",r],["__scopeId","data-v-b4aa95dc"]]);export{m as default};
