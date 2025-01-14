@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {library} from "@fortawesome/fontawesome-svg-core";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
@@ -31,5 +30,4 @@ library.add(faGithub, faHeart, faEnvelope, faLinkedin);
 
 app.component('font-awesome-icon', FontAwesomeIcon);
 // Usar el router y montar la app
-app.use(router);
 app.mount('#app');

@@ -5,7 +5,7 @@
 
     <!-- Contenido principal -->
     <main class="content">
-      <router-view />
+      <Home />
     </main>
 
     <!-- Footer -->
@@ -16,10 +16,12 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+import Home from "@/views/Home.vue";
 
 export default {
   name: "App",
   components: {
+    Home,
     Navbar,
     // eslint-disable-next-line vue/no-reserved-component-names
     Footer,
