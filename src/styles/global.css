@@ -19,6 +19,11 @@ a {
     color: inherit;
 }
 
+/* Ajustes para secciones con navbar fijo */
+section {
+    scroll-margin-top: 100px; /* Ajusta este valor a la altura de tu navbar */
+}
+
 /* Clases utilitarias */
 .text-center {
     text-align: center;
@@ -28,4 +33,128 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Ajustes para el navbar */
+.navbar-gradient {
+    background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
+    color: white;
+    position: fixed; /* Navbar fijo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* Asegura que el navbar esté sobre el contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Espaciado para evitar que el contenido quede debajo del navbar */
+body {
+    padding-top: 100px; /* Ajusta este valor a la altura del navbar */
+}
+
+/* Clases de botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-morado {
+    background-color: #6c24a7;
+    color: white;
+    border: none;
+}
+
+.btn-morado:hover {
+    background-color: #4e1a7d;
+}
+
+.btn-outline-morado {
+    background: transparent;
+    color: #6c24a7;
+    border: 2px solid #6c24a7;
+}
+
+.btn-outline-morado:hover {
+    background-color: #6c24a7;
+    color: white;
+}
+/* Efecto de teclado */
+.typing {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid transparent; /* Por defecto transparente */
+    animation: none; /* Sin animación hasta que esté activa */
+}
+
+.active-typing {
+    border-right: 2px solid #ffffff; /* Cambia el color del cursor */
+    animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #ffffff;
+    }
+}
+/* Ajustes generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ajustar imágenes */
+img {
+    max-width: 100%; /* Escala las imágenes */
+    height: auto;
+}
+
+/* Botones */
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+/* Responsividad general */
+@media (max-width: 768px) {
+    .contact-card {
+        margin-bottom: 20px; /* Agregar espacio entre elementos */
+    }
+
+    .form-control {
+        font-size: 0.9rem; /* Reducir el tamaño en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    h1, h2, h3 {
+        font-size: 1.2rem; /* Ajusta títulos */
+    }
+
+    .container {
+        padding: 0 10px; /* Reduce el padding general */
+    }
 }

@@ -7,6 +7,11 @@
           Mis <span class="highlight">Servicios</span>
         </span>
       </h2>
+
+      <p class="services-description text-center">
+        Descubre cómo puedo ayudarte con mis <span class="highlight">servicios profesionales</span>, diseñados para <span class="highlight">potenciar</span> tus proyectos con soluciones <span class="highlight">innovadoras</span> y escalables.
+      </p>
+
       <div class="services-list mt-4">
         <div
             class="service-item"
@@ -65,7 +70,7 @@ export default {
   padding: 60px 20px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .section-title {
@@ -87,6 +92,29 @@ export default {
   color: white;
 }
 
+.services-description {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px 0 40px;
+  line-height: 1.6;
+}
+
+.services-description .highlight {
+  background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
+  color: #6c24a7;
+  font-weight: bold;
+  padding: 0 4px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.services-description .highlight:hover {
+  background: linear-gradient(135deg, #a3d8f4, #d6bbfb);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
 .services-list {
   display: flex;
   flex-direction: column;
@@ -105,9 +133,9 @@ export default {
 }
 
 .service-item:hover {
-  background: #6c24a7; /* Hover morado sólido */
-  box-shadow: 0 8px 15px rgba(108, 36, 167, 0.5); /* Sombra elegante */
-  color: white; /* Cambia el texto a blanco */
+  background: #6c24a7;
+  box-shadow: 0 8px 15px rgba(108, 36, 167, 0.5);
+  color: white;
 }
 
 .service-content {
@@ -144,17 +172,17 @@ export default {
 
 .service-description {
   font-size: 1rem;
-  color: #6c24a7; /* Color morado por defecto */
+  color: #6c24a7;
   margin-left: 25px;
   transition: color 0.3s ease;
 }
 
 .service-item:hover .service-description {
-  color: white; /* Cambia a blanco en hover */
+  color: white;
 }
 
 .service-item:hover .service-number,
 .service-item:hover .service-title .highlight {
-  color: white; /* Asegura que todo el texto sea legible */
+  color: white;
 }
 </style>

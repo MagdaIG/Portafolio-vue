@@ -1,12 +1,17 @@
 <template>
   <section id="contact" class="contact-section py-5">
     <div class="container">
-      <!-- Título -->
-      <h2 class="section-title typing text-center">
+      <!-- Título y subtítulo -->
+      <h2 class="section-title typing text-center mb-3">
         <span class="line">
           Contá<span class="highlight">ctame</span>
         </span>
       </h2>
+      <p class="section-subtitle text-center mb-5">
+        Si necesitas <span class="highlight">ayuda con tu proyecto</span>, estás buscando
+        <span class="highlight">servicios de desarrollo web</span> o simplemente tienes
+        alguna consulta, <span class="highlight">¡hablemos!</span>
+      </p>
       <!-- Carta animada -->
       <div v-if="!isOpen" class="envelope-container text-center my-5">
         <div class="envelope" @click="toggleEnvelope">
@@ -22,86 +27,113 @@
       <!-- Contenido del contacto -->
       <div
           v-if="isOpen"
-          class="row justify-content-center align-items-center mt-4 contact-content"
+          class="row justify-content-center align-items-stretch mt-4 contact-content"
       >
         <!-- Formulario de contacto -->
-        <div class="col-lg-5 col-md-12 d-flex justify-content-center">
-          <div class="contact-card shadow">
-            <form>
-              <div class="mb-4">
-                <label for="name" class="form-label">Nombre *</label>
-                <div class="row">
-                  <div class="col">
-                    <input
-                        type="text"
-                        class="form-control input-style"
-                        id="first-name"
-                        placeholder="Nombre"
-                    />
-                  </div>
-                  <div class="col">
-                    <input
-                        type="text"
-                        class="form-control input-style"
-                        id="last-name"
-                        placeholder="Apellido"
-                    />
+        <div class="col-lg-5 col-md-12 d-flex">
+          <div class="card shadow-lg w-100">
+            <div class="card-body">
+              <h3 class="card-title text-center text-purple mb-4">¡Escríbeme!</h3>
+              <p class="card-text text-center mb-4">
+                Llena el formulario y te responderé lo antes posible.
+              </p>
+              <form>
+                <!-- Campo de Nombre y Apellido -->
+                <div class="mb-4">
+                  <label for="name" class="form-label">Nombre *</label>
+                  <div class="row">
+                    <div class="col">
+                      <input
+                          type="text"
+                          class="form-control"
+                          id="first-name"
+                          placeholder="Nombre"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                          type="text"
+                          class="form-control"
+                          id="last-name"
+                          placeholder="Apellido"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="mb-4">
-                <label for="email" class="form-label">Email *</label>
-                <input
-                    type="email"
-                    class="form-control input-style"
-                    id="email"
-                    placeholder="correo@ejemplo.com"
-                />
-              </div>
-              <div class="mb-4">
-                <label for="message" class="form-label">Mensaje *</label>
-                <textarea
-                    class="form-control input-style"
-                    id="message"
-                    rows="4"
-                    placeholder="Escribe tu mensaje aquí..."
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-morado btn-lg w-100">
-                Enviar
-              </button>
-            </form>
-          </div>
-        </div>
-        <!-- Información de contacto -->
-        <div class="col-lg-5 col-md-12 d-flex justify-content-center">
-          <div class="contact-card shadow contact-info-card">
-            <div class="text-center">
-              <img
-                  src="@/assets/images/mi-foto2.jpeg"
-                  alt="Magdalena Inalaf"
-                  class="contact-photo mb-4"
-              />
-              <h3 class="contact-title">Magdalena Inalaf G.</h3>
-              <ul class="contact-info list-unstyled">
-                <li>
-                  <span class="icon"> <FontAwesomeIcon :icon="['fab', 'linkedin']" /></span>
-                  <a href="https://www.linkedin.com/in/minalaf/" target="_blank">LinkedIn</a>
-                </li>
-                <li>
-                  <span class="icon"><FontAwesomeIcon :icon="['fab', 'github']" /></span>
-                  <a href="https://github.com/MagdaIG" target="_blank">GitHub</a>
-                </li>
-                <li>
-                  <span class="icon"><FontAwesomeIcon :icon="['fas', 'envelope']" /></span>
-                  <a href="mailto:magda.inalaf@gmail.com">Magda.inalaf@gmail.com</a>
-                </li>
-              </ul>
+                <!-- Campo de Email -->
+                <div class="mb-4">
+                  <label for="email" class="form-label">Email *</label>
+                  <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="correo@ejemplo.com"
+                  />
+                </div>
+                <!-- Campo de Mensaje -->
+                <div class="mb-4">
+                  <label for="message" class="form-label">Mensaje *</label>
+                  <textarea
+                      class="form-control"
+                      id="message"
+                      rows="4"
+                      placeholder="Escribe tu mensaje aquí..."
+                  ></textarea>
+                </div>
+                <!-- Botón de envío -->
+                <button type="submit" class="btn btn-morado w-100">
+                  Enviar
+                </button>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+
+        <!-- Información de contacto -->
+        <div class="col-lg-5 col-md-12 d-flex">
+          <div class="contact-card card shadow-lg w-100 bg-purple text-white contact-info-card">
+            <div class="card-body">
+              <h3 class="card-title text-center mb-4">Información de Contacto</h3>
+              <!-- Card interno -->
+              <div class="card shadow-sm text-center bg-white text-purple mx-auto">
+                <img
+                    src="@/assets/images/mi-foto2.jpeg"
+                    alt="Magdalena Inalaf"
+                    class="rounded-circle mx-auto d-block my-3"
+                    style="width: 80px; height: 80px; object-fit: cover;"
+                />
+                <h4 class="card-title mb-3">Magdalena Inalaf G.</h4>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+              <span class="me-2">
+                <FontAwesomeIcon :icon="['fab', 'linkedin']" class="text-purple" />
+              </span>
+                    <a href="https://www.linkedin.com/in/minalaf/" target="_blank" class="text-purple text-decoration-none">
+                      LinkedIn
+                    </a>
+                  </li>
+                  <li class="mb-2">
+              <span class="me-2">
+                <FontAwesomeIcon :icon="['fab', 'github']" class="text-purple" />
+              </span>
+                    <a href="https://github.com/MagdaIG" target="_blank" class="text-purple text-decoration-none">
+                      GitHub
+                    </a>
+                  </li>
+                  <li>
+              <span class="me-2">
+                <FontAwesomeIcon :icon="['fas', 'envelope']" class="text-purple" />
+              </span>
+                    <a href="mailto:magda.inalaf@gmail.com" class="text-purple text-decoration-none">
+                      magda.inalaf@gmail.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    </div>
   </section>
 </template>
 
@@ -132,7 +164,7 @@ export default {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
   padding: 60px 20px;
   border-radius: 20px;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .section-title {
@@ -147,6 +179,31 @@ export default {
 
 .section-title .highlight {
   color: #6c24a7;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4d4d4d;
+  font-weight: 400;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-subtitle .highlight {
+  color: #6c24a7;
+  font-weight: bold;
+  background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
+  padding: 0 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-subtitle .highlight:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .line {
@@ -194,6 +251,32 @@ export default {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+.typing.active-typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+}
+
 .heart-icon {
   color: #6c24a7;
   font-size: 2rem;
@@ -211,46 +294,110 @@ export default {
   background: white;
   border: 2px solid #6c24a7;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-info-card {
-  background: #6c24a7;
-  color: white;
+.contact-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.contact-info-card:hover {
-  background: #9a65c9;
-  color: white;
-}
-
-.contact-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.icon {
+.form-title {
   font-size: 1.8rem;
-  color: white;
-  margin-right: 10px;
+  color: #6c24a7;
+  font-weight: bold;
+}
+
+.form-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.input-style {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-style:focus {
+  border-color: #6c24a7;
+  box-shadow: 0 0 8px rgba(108, 36, 167, 0.3);
+  outline: none;
 }
 
 .btn-morado {
   background: #6c24a7;
   color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
   border: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-morado:hover {
   background: #9a65c9;
+  transform: scale(1.05);
+}
+
+.contact-info-card {
+  background: #6c24a7;
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.contact-info-card .contact-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-info-card:hover {
+  background: #9a65c9;
+}
+
+.contact-card.inner-card {
+  background: white;
+  color: #6c24a7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.contact-card.inner-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  margin-top: 15px;
+}
+
+.contact-info li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.contact-info .icon {
+  font-size: 1.2rem;
+  margin-right: 5px;
+  color: #6c24a7;
 }
 </style>

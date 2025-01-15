@@ -4,8 +4,14 @@
       <h2 class="skills-title mb-4" data-aos="fade-down">
         <span class="line">Habilidades</span> Técnicas
       </h2>
-      <p class="skills-description" data-aos="fade-up" data-aos-delay="200">
-        Estas son algunas de las tecnologías y herramientas con las que trabajo, organizadas de manera visual e interactiva.
+      <p class="skills-description text-center" data-aos="fade-up" data-aos-delay="200">
+        Descubre las <span class="highlight">herramientas</span> y
+        <span class="highlight">tecnologías</span> con las que he trabajado, desde las que <span class="highlight">domino</span> hasta aquellas en las que he <span class="highlight">incursionado</span>.
+        Algunas las he aprendido de forma <span class="highlight">autodidacta</span>, impulsada por mi <span class="highlight">curiosidad</span> y
+        <span class="highlight">pasión por el desarrollo</span>; otras, por <span class="highlight">formación académica</span> o como parte de proyectos <span class="highlight">desafiantes</span>.
+        Cada una de estas experiencias ha contribuido a enriquecer mis <span class="highlight">habilidades</span> y a crear proyectos
+        <span class="highlight">funcionales</span> e <span class="highlight">innovadores</span>. Estoy comprometida con seguir <span class="highlight">perfeccionándome</span> y
+        explorando <span class="highlight">nuevas tecnologías</span> para ampliar mi <span class="highlight">impacto</span> y <span class="highlight">crecimiento profesional</span>.
       </p>
       <div class="row justify-content-center">
         <div
@@ -46,6 +52,8 @@ export default {
         { name: "Spring Boot", icon: "springboot-icon.png" },
         { name: "Ionic", icon: "ionic-icon.png" },
         { name: "GitHub", icon: "github-icon.png" },
+        { name: "VueJS", icon: "vuejs-icon.png" },
+        { name: "Figma", icon: "figma-icon.png" },
       ],
     };
   },
@@ -56,6 +64,8 @@ export default {
 .skills-section {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
   padding: 50px 20px;
+  margin-top: 30px;
+  border-radius: 20px;
 }
 
 .skills-title {
@@ -75,12 +85,40 @@ export default {
 }
 
 .skills-description {
-  color: #fff;
   font-size: 1.2rem;
-  margin-bottom: 40px;
+  line-height: 1.8;
+  color: #4d4d4d;
+  font-weight: 400;
   text-align: center;
-  opacity: 0;
-  animation: fadeIn 2s 3s forwards;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.skills-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #4d4d4d;
+}
+
+.skills-description .highlight {
+  color: #6c24a7;
+  font-weight: bold;
+  background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
+  padding: 2px 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.skills-description .highlight:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .skill-card {

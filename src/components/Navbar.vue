@@ -33,6 +33,7 @@
     </nav>
 
     <!-- Sidebar -->
+    <!-- Sidebar -->
     <div :class="['sidebar', { 'sidebar-open': isSidebarOpen }]" @click.self="toggleSidebar">
       <div class="sidebar-content">
         <button class="close-btn" @click="toggleSidebar">&times;</button>
@@ -79,15 +80,14 @@ export default {
 </script>
 
 <style scoped>
-/* Navbar con degradado */
 .navbar-gradient {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
   color: white;
-  position: fixed; /* Fija el navbar */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1030; /* Asegura que esté por encima del contenido */
+  z-index: 1030;
 }
 
 .navbar-brand {
@@ -101,10 +101,9 @@ export default {
 
 /* Espaciado para el contenido */
 body {
-  padding-top: 70px; /* Ajusta esto según la altura del navbar */
+  padding-top: 100px;
 }
 
-/* Enlaces del navbar con efecto hover */
 .link-hover {
   color: white;
   text-decoration: none;
@@ -125,11 +124,11 @@ body {
 }
 
 .link-hover:hover {
-  color: rgba(113, 64, 159, 0.99); /* Cambia el color del texto */
+  color: rgba(113, 64, 159, 0.99);
 }
 
 .link-hover:hover::after {
-  width: 100%; /* Subrayado dinámico */
+  width: 100%;
 }
 
 /* Sidebar */
@@ -179,10 +178,14 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar-link:hover {
-  color: rgba(144, 95, 181, 0.99);
+  background-color: #6c24a7;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 </style>

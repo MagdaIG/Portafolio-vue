@@ -8,6 +8,10 @@
         </span>
       </h2>
 
+      <p class="projects-description" data-aos="fade-up" data-aos-delay="200">
+        Descubre una selección de <span class="highlight">proyectos</span> que capturan mi <span class="highlight">pasión</span> por el desarrollo web y mi capacidad para transformar <span class="highlight">ideas</span> en <span class="highlight">soluciones funcionales y significativas</span>. Aunque aquí presento <span class="highlight">tres proyectos destacados</span>, son solo una pequeña muestra de todo lo que he creado. Te invito a explorar el resto de mi trabajo, donde cada proyecto cuenta una <span class="highlight">historia de aprendizaje, innovación y dedicación</span>.
+      </p>
+
       <!-- Contenedor de proyectos -->
       <div class="row justify-content-center mt-4">
         <div
@@ -68,10 +72,10 @@ export default {
 /* Sección */
 .projects-section {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
-  padding: 60px 20px;
+  padding: 50px 20px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .projects-title {
@@ -93,6 +97,35 @@ export default {
   color: #ffffff;
 }
 
+.typing.active-typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+.projects-description {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px 0 40px;
+  line-height: 1.6;
+}
+
+.projects-description .highlight {
+  background: linear-gradient(135deg, #a3d8f4, #d6bbfb);
+  color: #6c24a7;
+  font-weight: bold;
+  padding: 0 4px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.projects-description .highlight:hover {
+  background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
+  color: #ffffff;
+  transform: scale(1.1);
+}
 @keyframes typing {
   from {
     width: 0;

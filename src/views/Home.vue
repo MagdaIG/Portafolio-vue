@@ -1,25 +1,3 @@
-<script>
-import Skills from "@/components/Skills.vue";
-import Projects from "@/components/Projects.vue";
-import ExperienceAndEducation from "@/components/ExperienceAndEducation.vue";
-import Servicios from "@/components/Servicios.vue";
-import Contacto from "@/components/Contacto.vue";
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: "Home",
-  components: {
-    FontAwesomeIcon,
-    Skills,
-    Projects,
-    ExperienceAndEducation,
-    Servicios,
-    Contacto,
-  },
-};
-</script>
-
 <template>
   <div class="home">
     <!-- Sección Hero -->
@@ -30,20 +8,16 @@ export default {
           <div class="col-md-6 text-center text-md-start">
             <h1 class="hero-title">
               <span class="line typing">
-                Soy <span class="highlight">Magdalena</span>
+                Soy <span class="highlight">Magdalena,</span>    <br /> <span class="highlight white"> desarrolladora </span>
               </span>
               <br />
-              <span class="line typing" style="animation-delay: 4s;">
-                <span class="highlight">Desarrolladora</span>
-              </span>
-              <br />
-              <span class="line typing" style="animation-delay: 8s;">
+              <span class="line">
                 Web + <span class="highlight white">UX Designer</span>
               </span>
             </h1>
             <p class="hero-description">
-              Me especializo en resolver problemas complejos de experiencia de usuario,
-              creando soluciones dinámicas que conectan a millones de personas.
+              Me especializo en <span class="highlight">resolver problemas complejos</span> de experiencia de usuario, creando
+              <span class="highlight">soluciones dinámicas</span> que conectan a millones de personas.
             </p>
             <div class="buttons-container">
               <a
@@ -58,7 +32,6 @@ export default {
                   target="_blank"
                   class="btn btn-outline-morado btn-lg icon-button"
               >
-
                 <FontAwesomeIcon :icon="['fab', 'github']" />
               </a>
               <a
@@ -107,7 +80,27 @@ export default {
   </div>
 </template>
 
+<script>
+import Skills from "@/components/Skills.vue";
+import Projects from "@/components/Projects.vue";
+import ExperienceAndEducation from "@/components/ExperienceAndEducation.vue";
+import Servicios from "@/components/Servicios.vue";
+import Contacto from "@/components/Contacto.vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
+export default {
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Home",
+  components: {
+    FontAwesomeIcon,
+    Skills,
+    Projects,
+    ExperienceAndEducation,
+    Servicios,
+    Contacto,
+  },
+};
+</script>
 
 <style scoped>
 /* Sección Hero */
@@ -117,7 +110,7 @@ export default {
   padding: 60px 20px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  margin-top: 70px;
+  margin-top: 80px;
 }
 
 .hero-title {
@@ -133,6 +126,13 @@ export default {
   animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
+.line:not(.typing) {
+  white-space: normal;
+  overflow: visible;
+  border-right: none;
+  animation: none;
+}
+
 .highlight {
   color: #6c24a7;
 }
@@ -143,8 +143,30 @@ export default {
 
 .hero-description {
   font-size: 1.2rem;
-  margin: 20px 0;
-  color: #f1f1f1;
+  line-height: 1.8;
+  color: #4d4d4d;
+  font-weight: 400;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-description .highlight {
+  color: #6c24a7; /* Color morado */
+  font-weight: bold; /* Negrita para destacar */
+  background: linear-gradient(135deg, #d6bbfb, #a3d8f4); /* Fondo degradado */
+  padding: 2px 5px; /* Espaciado reducido */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block; /* Asegura que el tamaño sea correcto */
+}
+
+.hero-description .highlight:hover {
+  transform: scale(1.05); /* Ligeramente más grande al hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .buttons-container {
@@ -201,6 +223,13 @@ export default {
   height: 50px;
   border-radius: 50%;
   font-size: 1.5rem;
+}
+
+.typing.active-typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 @keyframes typing {

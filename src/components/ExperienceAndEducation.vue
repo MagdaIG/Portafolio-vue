@@ -1,6 +1,16 @@
 <template>
   <section id="experience-education" class="experience-education-section py-5 mt-5">
     <div class="container">
+      <h2 class="intro-title text-center">
+        ¿Cuál es <span class="highlight-morado">mi</span> <span class="highlight-blanco">experiencia?</span>
+      </h2>
+      <p class="experience-description text-center">
+        Mi trayectoria refleja mi pasión por <span class="highlight">aprender, enseñar y crear</span>. Comencé en la <span class="highlight">pedagogía</span>, donde descubrí mi amor por guiar a otros y compartir conocimientos. Estas habilidades ahora potencian mi <span class="highlight">trabajo en equipo</span> y mi capacidad para construir soluciones colaborativas.
+
+        Más adelante, decidí regresar a mis raíces en la <span class="highlight">tecnología</span>, combinando mi formación en programación y análisis de sistemas con las herramientas pedagógicas que adquirí. En el futuro, espero <span class="highlight">fusionar ambos mundos</span>, contribuyendo al desarrollo de equipos y proyectos con un enfoque humano, innovador y estratégico.
+
+        Para mí, enseñar no es solo una pasión; es una forma de <span class="highlight">amplificar el impacto de mi trabajo</span> y generar un cambio significativo.
+      </p>
       <!-- Títulos principales -->
       <div class="row">
         <!-- Experiencia -->
@@ -53,6 +63,9 @@
             Mis <span class="highlight">Certificados</span>
           </span>
         </h3>
+        <p class="certificates-text text-center">
+          Explora aquí los <span class="highlight">certificados</span> que avalan mis <span class="highlight">conocimientos</span> y <span class="highlight">habilidades</span> en <span class="highlight">tecnología</span>, <span class="highlight">diseño</span> y <span class="highlight">metodologías ágiles</span>. Cada uno refleja mi <span class="highlight">compromiso</span> con el <span class="highlight">aprendizaje continuo</span>, porque creo firmemente que el <span class="highlight">estudio</span> y el <span class="highlight">desarrollo personal</span> nunca terminan. Siempre estoy en busca de <span class="highlight">nuevos desafíos</span>, y mis próximos objetivos incluyen <span class="highlight">certificaciones</span> en <span class="highlight">enseñanza</span> y <span class="highlight">comunicación</span>, áreas que me <span class="highlight">apasionan</span> y complementan mi <span class="highlight">perfil profesional</span>.
+        </p>
         <div class="row justify-content-center mt-4">
           <div
               class="col-md-4 col-sm-6 mb-3"
@@ -132,6 +145,38 @@ export default {
 </script>
 
 <style scoped>
+
+.intro-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+.highlight-morado {
+  color: #6c24a7; /* Morado principal */
+  font-weight: bold;
+  background: none;
+}
+
+/* Estilo para la parte blanca */
+.highlight-blanco {
+  color: #ffffff;
+  font-weight: bold;
+  background: none;
+}
+
+.intro-text {
+  font-size: 2.8rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
 /* Sección */
 .experience-education-section {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
@@ -150,7 +195,8 @@ export default {
   border-right: 2px solid #ffffff;
   animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
   margin-bottom: 30px;
-  text-align: center; /* Centra el título */
+  text-align: center;
+  margin-top: 70px;
 }
 
 .section-title .highlight {
@@ -158,7 +204,30 @@ export default {
 }
 
 .line {
-  color: white;
+  color: rgb(255, 255, 255);
+}
+.services-description {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px 0 40px;
+  line-height: 1.6;
+}
+
+.experience-description .highlight {
+  background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
+  color: #6c24a7;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 4px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.experience-description .highlight:hover {
+  background: linear-gradient(135deg, #a3d8f4, #d6bbfb);
+  color: #ffffff;
+  transform: scale(1.1);
 }
 
 /* Tarjetas */
@@ -170,7 +239,7 @@ export default {
   margin-bottom: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, background-color 0.3s ease;
-  height: 200px; /* Tamaño consistente */
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -197,9 +266,32 @@ export default {
   color: #ffffff;
   text-align: center;
 }
+/* Certificados */
+.certificates-text .highlight {
+  background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
+  color: #6c24a7;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 4px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+}
+
+.certificates-text .highlight:hover {
+  background: linear-gradient(135deg, #a3d8f4, #d6bbfb);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+
+.section-title .highlight {
+  color: #6c24a7;
+}
 
 .certificate-card .btn-morado {
-  margin-top: auto; /* Asegura que el botón esté al final */
+  margin-top: auto;
 }
 
 /* Botones */
@@ -208,13 +300,20 @@ export default {
   color: #ffffff;
   border: none;
   font-size: 1.2rem;
-  padding: 15px 25px; /* Botón más grande */
+  padding: 15px 25px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-morado:hover {
   background: rgba(219, 192, 246, 0.99);
   color: rgba(113, 64, 159, 0.99);
+}
+
+.typing.active-typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 @keyframes typing {
