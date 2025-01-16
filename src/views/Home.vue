@@ -21,7 +21,7 @@
             </p>
             <div class="buttons-container">
               <a
-                  href="/certificates/CV.pdf"
+                  :href="`certificates/CV.pdf`"
                   download
                   class="btn btn-morado btn-lg"
               >

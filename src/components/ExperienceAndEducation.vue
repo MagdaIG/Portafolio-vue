@@ -75,7 +75,7 @@
             <div class="certificate-card text-center">
               <h5 class="certificate-title">{{ certificate.name }}</h5>
               <a
-                  :href="`/certificates/${certificate.file}`"
+                  :href="`certificates/${certificate.file}`"
                   download
                   class="btn btn-morado btn-lg mt-3"
               >
