@@ -276,7 +276,7 @@ export default {
   margin-bottom: 1.5rem;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  min-height: 220px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -330,6 +330,7 @@ export default {
   font-weight: bold;
   margin-bottom: 0.5rem;
   line-height: 1.3;
+  flex-grow: 1;
 }
 
 .timeline-location {
@@ -345,6 +346,7 @@ export default {
   padding: 0;
   margin: 0;
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 .timeline-details li {
@@ -392,6 +394,10 @@ export default {
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Certificados */
@@ -513,7 +519,7 @@ export default {
   .certificate-card {
     padding: 2.5rem;
     margin-bottom: 2rem;
-    min-height: 250px;
+    height: 320px;
   }
 
   .timeline-title {
@@ -588,7 +594,7 @@ export default {
   .certificate-card {
     padding: 2rem;
     margin-bottom: 1.5rem;
-    min-height: 230px;
+    height: 300px;
   }
 
   .timeline-title {
@@ -650,7 +656,7 @@ export default {
   .certificate-card {
     padding: 1.5rem;
     margin-bottom: 1rem;
-    min-height: 200px;
+    height: 280px;
   }
 
   .timeline-title {
@@ -707,7 +713,7 @@ export default {
   .certificate-card {
     padding: 1.25rem;
     margin-bottom: 0.75rem;
-    min-height: 180px;
+    height: 260px;
   }
 
   .timeline-title {
