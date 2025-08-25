@@ -13,6 +13,6 @@ module.exports = defineConfig({
   },
   transpileDependencies: true,
   publicPath: process.env.NODE_ENV === 'production'
-      ? '/Portafolio-vue/'
+      ? '/Portafolio-vue/docs/'
       : '/'
 })
