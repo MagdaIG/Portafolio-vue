@@ -1,5 +1,5 @@
 <template>
-  <section id="skills" class="skills-section py-5">
+  <section id="skills" class="skills-section">
     <div class="container">
       <h2 class="skills-title mb-4" data-aos="fade-down">
         <span class="line">Habilidades</span> Técnicas
@@ -63,9 +63,10 @@ export default {
 <style>
 .skills-section {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
-  padding: 50px 20px;
-  margin-top: 30px;
+  padding: 3rem 2rem;
+  margin: 0 1rem;
   border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .skills-title {
@@ -73,7 +74,7 @@ export default {
   font-weight: bold;
   font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
   overflow: hidden;
   white-space: nowrap;
@@ -91,18 +92,7 @@ export default {
   font-weight: 400;
   text-align: center;
   max-width: 800px;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-.skills-description {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  text-align: left;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  color: #4d4d4d;
+  margin: 0 auto 2rem auto;
 }
 
 .skills-description .highlight {
@@ -124,8 +114,8 @@ export default {
 .skill-card {
   background: rgba(255, 255, 255, 0.25);
   border-radius: 15px;
-  margin: 15px;
-  padding: 25px;
+  margin: 0.75rem;
+  padding: 1.5rem;
   text-align: center;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -140,7 +130,7 @@ export default {
 
 .icon-container img {
   max-width: 90px;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
@@ -154,7 +144,7 @@ export default {
   font-size: 1.4rem;
   color: #ffffff;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 
 @keyframes typing {
@@ -179,6 +169,67 @@ export default {
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 2.5rem 1.5rem;
+    margin: 0 0.5rem;
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .skills-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skill-card {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .icon-container img {
+    max-width: 70px;
+  }
+
+  .skill-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-section {
+    padding: 2rem 1rem;
+    margin: 0 0.25rem;
+  }
+
+  .skills-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .skills-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .skill-card {
+    margin: 0.25rem;
+    padding: 0.75rem;
+  }
+
+  .icon-container img {
+    max-width: 60px;
+  }
+
+  .skill-name {
+    font-size: 1rem;
   }
 }
 </style>

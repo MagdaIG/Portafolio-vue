@@ -1,5 +1,5 @@
 <template>
-  <section id="proyectos" class="projects-section py-5">
+  <section id="proyectos" class="projects-section">
     <div class="container">
       <!-- Título con efecto de escritura -->
       <h2 class="projects-title typing">
@@ -72,10 +72,10 @@ export default {
 /* Sección */
 .projects-section {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
-  padding: 50px 20px;
+  padding: 3rem 2rem;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  margin-top: 40px;
+  margin: 0 1rem;
 }
 
 .projects-title {
@@ -87,6 +87,7 @@ export default {
   border-right: 2px solid #ffffff;
   animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .projects-title .highlight {
@@ -107,8 +108,9 @@ export default {
 .projects-description {
   font-size: 1.2rem;
   text-align: center;
-  margin: 20px 0 40px;
+  margin: 0 0 2rem 0;
   line-height: 1.6;
+  color: #4d4d4d;
 }
 
 .projects-description .highlight {
@@ -126,6 +128,7 @@ export default {
   color: #ffffff;
   transform: scale(1.1);
 }
+
 @keyframes typing {
   from {
     width: 0;
@@ -153,9 +156,9 @@ export default {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  padding: 20px;
-  margin-bottom: 30px;
-  color:black;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: black;
 }
 
 .project-card:hover {
@@ -168,18 +171,18 @@ export default {
 .project-image {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-title {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
 }
 
 .project-description {
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   color: #f1f1f1;
 }
 
@@ -192,5 +195,62 @@ export default {
 .btn-outline-morado:hover {
   background: rgba(219, 192, 246, 0.99);
   color: #ffffff;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 2.5rem 1.5rem;
+    margin: 0 0.5rem;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .projects-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-section {
+    padding: 2rem 1rem;
+    margin: 0 0.25rem;
+  }
+
+  .projects-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .projects-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
 }
 </style>

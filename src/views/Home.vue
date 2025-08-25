@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- Sección Hero -->
-    <section id="home" class="hero-section py-5">
+    <section id="home" class="hero-section">
       <div class="container">
         <div class="row align-items-center">
           <!-- Columna de texto -->
@@ -54,27 +54,27 @@
     </section>
 
     <!-- Sección de Habilidades -->
-    <section id="habilidades" class="py-5">
+    <section id="habilidades" class="section-spacing">
       <Skills />
     </section>
 
     <!-- Componente de Proyectos -->
-    <section id="proyectos" class="py-5">
+    <section id="proyectos" class="section-spacing">
       <Projects />
     </section>
 
     <!-- Componente de Experiencia y Educación -->
-    <section id="experience-education" class="py-5">
+    <section id="experience-education" class="section-spacing">
       <ExperienceAndEducation />
     </section>
 
     <!-- Componente de Servicios -->
-    <section id="servicios" class="py-5">
+    <section id="servicios" class="section-spacing">
       <Servicios />
     </section>
 
     <!-- Componente de Contacto -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="section-spacing">
       <Contacto />
     </section>
   </div>
@@ -103,14 +103,19 @@ export default {
 </script>
 
 <style scoped>
+/* Espaciado consistente entre secciones */
+.section-spacing {
+  margin: 2rem 0;
+}
+
 /* Sección Hero */
 .hero-section {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
   color: #ffffff;
-  padding: 60px 20px;
+  padding: 4rem 2rem;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  margin-top: 80px;
+  margin: 3rem 1rem 2rem 1rem;
 }
 
 .hero-title {
@@ -148,9 +153,7 @@ export default {
   font-weight: 400;
   text-align: left;
   max-width: 600px;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin: 1.5rem auto 2rem auto;
 }
 
 .hero-description .highlight {
@@ -172,7 +175,9 @@ export default {
 .buttons-container {
   display: flex;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-image-container {
@@ -248,6 +253,64 @@ export default {
   }
   50% {
     border-color: #ffffff;
+  }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1rem;
+    margin: 1rem 0.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    margin: 1rem auto 1.5rem auto;
+  }
+
+  .buttons-container {
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 2rem 1rem;
+    margin: 0.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin: 1rem auto;
+  }
+
+  .buttons-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 90%;
+  }
+
+  .section-spacing {
+    margin: 1.5rem 0;
   }
 }
 </style>

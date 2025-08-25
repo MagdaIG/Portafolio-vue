@@ -1,5 +1,5 @@
 <template>
-  <section id="servicios" class="services-section py-5">
+  <section id="servicios" class="services-section">
     <div class="container">
       <!-- Título de Servicios -->
       <h2 class="section-title typing text-center">
@@ -12,7 +12,7 @@
         Descubre cómo puedo ayudarte con mis <span class="highlight">servicios profesionales</span>, diseñados para <span class="highlight">potenciar</span> tus proyectos con soluciones <span class="highlight">innovadoras</span> y escalables.
       </p>
 
-      <div class="services-list mt-4">
+      <div class="services-list">
         <div
             class="service-item"
             v-for="(service, index) in services"
@@ -67,10 +67,10 @@ export default {
 /* Sección */
 .services-section {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
-  padding: 60px 20px;
+  padding: 3rem 2rem;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  margin-top: 40px;
+  margin: 0 1rem;
 }
 
 .section-title {
@@ -81,7 +81,7 @@ export default {
   overflow: hidden;
   border-right: 2px solid #ffffff;
   animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
 }
 
 .section-title .highlight {
@@ -95,8 +95,9 @@ export default {
 .services-description {
   font-size: 1.2rem;
   text-align: center;
-  margin: 20px 0 40px;
+  margin: 0 0 2rem 0;
   line-height: 1.6;
+  color: #4d4d4d;
 }
 
 .services-description .highlight {
@@ -118,7 +119,7 @@ export default {
 .services-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .service-item {
@@ -126,7 +127,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  padding: 15px 25px;
+  padding: 1rem 1.5rem;
   border-radius: 10px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -148,7 +149,7 @@ export default {
 .service-number-title {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 1rem;
 }
 
 .service-number {
@@ -173,7 +174,7 @@ export default {
 .service-description {
   font-size: 1rem;
   color: #6c24a7;
-  margin-left: 25px;
+  margin-left: 1.5rem;
   transition: color 0.3s ease;
 }
 
@@ -184,5 +185,71 @@ export default {
 .service-item:hover .service-number,
 .service-item:hover .service-title .highlight {
   color: white;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 2.5rem 1.5rem;
+    margin: 0 0.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .services-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-item {
+    padding: 0.75rem 1rem;
+  }
+
+  .service-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .service-description {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-section {
+    padding: 2rem 1rem;
+    margin: 0 0.25rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .services-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-item {
+    padding: 0.75rem;
+  }
+
+  .service-number {
+    font-size: 1.5rem;
+  }
+
+  .service-title {
+    font-size: 1.2rem;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
 }
 </style>

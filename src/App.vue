@@ -41,7 +41,20 @@ export default {
 /* Estilo para el contenido principal */
 .content {
   flex: 1;
-  padding: 20px;
+  padding: 0;
   background-color: #f9f9f9;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    padding: 0;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="contact-section py-5">
+  <section id="contact" class="contact-section">
     <div class="container">
       <!-- Título y subtítulo -->
       <h2 class="section-title typing text-center mb-3">
@@ -27,113 +27,99 @@
       <!-- Contenido del contacto -->
       <div
           v-if="isOpen"
-          class="row justify-content-center align-items-stretch mt-4 contact-content"
+          class="contact-content"
       >
         <!-- Formulario de contacto -->
-        <div class="col-lg-5 col-md-12 d-flex">
-          <div class="card shadow-lg w-100">
-            <div class="card-body">
-              <h3 class="card-title text-center text-purple mb-4">¡Escríbeme!</h3>
-              <p class="card-text text-center mb-4">
-                Llena el formulario y te responderé lo antes posible.
-              </p>
-              <form>
-                <!-- Campo de Nombre y Apellido -->
-                <div class="mb-4">
-                  <label for="name" class="form-label">Nombre *</label>
-                  <div class="row">
-                    <div class="col">
-                      <input
-                          type="text"
-                          class="form-control"
-                          id="first-name"
-                          placeholder="Nombre"
-                      />
-                    </div>
-                    <div class="col">
-                      <input
-                          type="text"
-                          class="form-control"
-                          id="last-name"
-                          placeholder="Apellido"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <!-- Campo de Email -->
-                <div class="mb-4">
-                  <label for="email" class="form-label">Email *</label>
+        <div class="contact-form-container">
+          <div class="contact-form-card">
+            <h3 class="form-title">¡Escríbeme!</h3>
+            <p class="form-description">
+              Llena el formulario y te responderé lo antes posible.
+            </p>
+            <form class="contact-form">
+              <!-- Campo de Nombre y Apellido -->
+              <div class="form-group">
+                <label for="name" class="form-label">Nombre *</label>
+                <div class="name-fields">
                   <input
-                      type="email"
+                      type="text"
                       class="form-control"
-                      id="email"
-                      placeholder="correo@ejemplo.com"
+                      id="first-name"
+                      placeholder="Nombre"
+                  />
+                  <input
+                      type="text"
+                      class="form-control"
+                      id="last-name"
+                      placeholder="Apellido"
                   />
                 </div>
-                <!-- Campo de Mensaje -->
-                <div class="mb-4">
-                  <label for="message" class="form-label">Mensaje *</label>
-                  <textarea
-                      class="form-control"
-                      id="message"
-                      rows="4"
-                      placeholder="Escribe tu mensaje aquí..."
-                  ></textarea>
-                </div>
-                <!-- Botón de envío -->
-                <button type="submit" class="btn btn-morado w-100">
-                  Enviar
-                </button>
-              </form>
-            </div>
+              </div>
+              <!-- Campo de Email -->
+              <div class="form-group">
+                <label for="email" class="form-label">Email *</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="correo@ejemplo.com"
+                />
+              </div>
+              <!-- Campo de Mensaje -->
+              <div class="form-group">
+                <label for="message" class="form-label">Mensaje *</label>
+                <textarea
+                    class="form-control"
+                    id="message"
+                    rows="4"
+                    placeholder="Escribe tu mensaje aquí..."
+                ></textarea>
+              </div>
+              <!-- Botón de envío -->
+              <button type="submit" class="btn btn-morado">
+                Enviar
+              </button>
+            </form>
           </div>
         </div>
 
         <!-- Información de contacto -->
-        <div class="col-lg-5 col-md-12 d-flex">
-          <div class="contact-card card shadow-lg w-100 bg-purple text-white contact-info-card">
-            <div class="card-body">
-              <h3 class="card-title text-center mb-4">Información de Contacto</h3>
-              <!-- Card interno -->
-              <div class="card shadow-sm text-center bg-white text-purple mx-auto">
-                <img
-                    src="@/assets/images/mi-foto2.jpeg"
-                    alt="Magdalena Inalaf"
-                    class="rounded-circle mx-auto d-block my-3"
-                    style="width: 80px; height: 80px; object-fit: cover;"
-                />
-                <h4 class="card-title mb-3">Magdalena Inalaf G.</h4>
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-              <span class="me-2">
-                <FontAwesomeIcon :icon="['fab', 'linkedin']" class="text-purple" />
-              </span>
-                    <a href="https://www.linkedin.com/in/minalaf/" target="_blank" class="text-purple text-decoration-none">
-                      LinkedIn
-                    </a>
-                  </li>
-                  <li class="mb-2">
-              <span class="me-2">
-                <FontAwesomeIcon :icon="['fab', 'github']" class="text-purple" />
-              </span>
-                    <a href="https://github.com/MagdaIG" target="_blank" class="text-purple text-decoration-none">
-                      GitHub
-                    </a>
-                  </li>
-                  <li>
-              <span class="me-2">
-                <FontAwesomeIcon :icon="['fas', 'envelope']" class="text-purple" />
-              </span>
-                    <a href="mailto:magda.inalaf@gmail.com" class="text-purple text-decoration-none">
-                      magda.inalaf@gmail.com
-                    </a>
-                  </li>
-                </ul>
-              </div>
+        <div class="contact-info-container">
+          <div class="contact-info-card">
+            <h3 class="contact-title">Información de Contacto</h3>
+            <!-- Card interno -->
+            <div class="contact-profile-card">
+              <img
+                  src="@/assets/images/mi-foto2.jpeg"
+                  alt="Magdalena Inalaf"
+                  class="contact-photo"
+              />
+              <h4 class="contact-name">Magdalena Inalaf G.</h4>
+              <ul class="contact-links">
+                <li class="contact-link-item">
+                  <a href="https://www.linkedin.com/in/minalaf/" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                </li>
+                <li class="contact-link-item">
+                  <a href="https://github.com/MagdaIG" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                  </a>
+                </li>
+                <li class="contact-link-item">
+                  <a href="mailto:magda.inalaf@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>magda.inalaf@gmail.com</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -162,9 +148,10 @@ export default {
 <style scoped>
 .contact-section {
   background: linear-gradient(135deg, #d6bbfb, #a3d8f4);
-  padding: 60px 20px;
+  padding: 3rem 2rem;
   border-radius: 20px;
-  margin-top: 70px;
+  margin: 0 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .section-title {
@@ -175,6 +162,7 @@ export default {
   overflow: hidden;
   border-right: 2px solid #ffffff;
   animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+  margin-bottom: 1.5rem;
 }
 
 .section-title .highlight {
@@ -188,7 +176,7 @@ export default {
   font-weight: 400;
   text-align: center;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 }
 
 .section-subtitle .highlight {
@@ -215,6 +203,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0;
 }
 
 .envelope {
@@ -280,124 +269,415 @@ export default {
 .heart-icon {
   color: #6c24a7;
   font-size: 2rem;
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 
 .letter-text {
   color: #6c24a7;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 
-/* Contenedores */
-.contact-card {
+/* Contenedores principales */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-form-container,
+.contact-info-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form-card {
   background: white;
-  border: 2px solid #6c24a7;
-  border-radius: 10px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.form-title {
-  font-size: 1.8rem;
-  color: #6c24a7;
-  font-weight: bold;
-}
-
-.form-description {
-  font-size: 1rem;
-  color: #666;
-}
-
-.input-style {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.input-style:focus {
-  border-color: #6c24a7;
-  box-shadow: 0 0 8px rgba(108, 36, 167, 0.3);
-  outline: none;
-}
-
-.btn-morado {
-  background: #6c24a7;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-morado:hover {
-  background: #9a65c9;
-  transform: scale(1.05);
+.contact-form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
 .contact-info-card {
-  background: #6c24a7;
+  background: linear-gradient(135deg, #6c24a7, #9a65c9);
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 350px;
-}
-
-.contact-info-card .contact-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  max-width: 500px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-info-card:hover {
-  background: #9a65c9;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
-.contact-card.inner-card {
-  background: white;
+/* Títulos */
+.form-title,
+.contact-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
   color: #6c24a7;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 15px;
-  max-width: 300px;
-  width: 100%;
 }
 
-.contact-card.inner-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.contact-title {
+  color: white;
+}
+
+.form-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-control {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #f8f9fa;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #6c24a7;
+  box-shadow: 0 0 0 3px rgba(108, 36, 167, 0.1);
+  background: white;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+  flex-grow: 1;
+}
+
+/* Botón */
+.btn-morado {
+  background: #6c24a7;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: auto;
+}
+
+.btn-morado:hover {
+  background: #5a1f8a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 36, 167, 0.3);
+}
+
+/* Tarjeta de perfil */
+.contact-profile-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-photo {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  border: 4px solid #6c24a7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contact-info {
-  margin-top: 15px;
-}
-
-.contact-info li {
-  margin-bottom: 8px;
-  font-size: 0.9rem;
-}
-
-.contact-info .icon {
-  font-size: 1.2rem;
-  margin-right: 5px;
+.contact-name {
+  font-size: 1.4rem;
+  font-weight: bold;
   color: #6c24a7;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Enlaces de contacto */
+.contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.contact-link-item {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #6c24a7;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 250px;
+  justify-content: center;
+}
+
+.contact-link:hover {
+  background: linear-gradient(135deg, #6c24a7, #9a65c9);
+  color: white;
+  transform: translateY(-3px);
+  text-decoration: none;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(108, 36, 167, 0.4);
+}
+
+.contact-link i {
+  font-size: 1.3rem;
+  width: 24px;
+  text-align: center;
+}
+
+.contact-link span {
+  font-weight: 600;
+}
+
+/* Media queries para responsividad */
+@media (min-width: 1200px) {
+  .contact-content {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .contact-form-card,
+  .contact-info-card {
+    max-width: 550px;
+    padding: 3rem;
+    min-height: 650px;
+  }
+
+  .form-title,
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-name {
+    font-size: 1.6rem;
+  }
+
+  .contact-link {
+    padding: 1.2rem 1.8rem;
+    font-size: 1.1rem;
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .contact-content {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .contact-form-card,
+  .contact-info-card {
+    max-width: 480px;
+    padding: 2.5rem;
+    min-height: 600px;
+  }
+
+  .form-title,
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contact-link {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-form-card,
+  .contact-info-card {
+    max-width: 100%;
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .form-title,
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .name-fields {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .contact-name {
+    font-size: 1.3rem;
+  }
+
+  .contact-links {
+    gap: 0.75rem;
+  }
+
+  .contact-link {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 2rem 1rem;
+    margin: 0 0.25rem;
+  }
+
+  .contact-content {
+    gap: 1.5rem;
+  }
+
+  .contact-form-card,
+  .contact-info-card {
+    padding: 1.5rem;
+  }
+
+  .form-title,
+  .contact-title {
+    font-size: 1.4rem;
+  }
+
+  .form-description {
+    font-size: 0.9rem;
+  }
+
+  .contact-form {
+    gap: 1.25rem;
+  }
+
+  .form-control {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-morado {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .contact-photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contact-name {
+    font-size: 1.2rem;
+  }
+
+  .contact-link {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    max-width: 200px;
+  }
+
+  .contact-link i {
+    font-size: 1.1rem;
+  }
 }
 </style>

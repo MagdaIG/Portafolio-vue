@@ -21,7 +21,7 @@ a {
 
 /* Ajustes para secciones con navbar fijo */
 section {
-    scroll-margin-top: 100px; /* Ajusta este valor a la altura de tu navbar */
+    scroll-margin-top: 120px; /* Aumentado para evitar superposición */
 }
 
 /* Clases utilitarias */
@@ -32,7 +32,7 @@ section {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 1rem;
 }
 
 /* Ajustes para el navbar */
@@ -45,17 +45,18 @@ section {
     width: 100%;
     z-index: 1030; /* Asegura que el navbar esté sobre el contenido */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 80px; /* Altura fija del navbar */
 }
 
 /* Espaciado para evitar que el contenido quede debajo del navbar */
 body {
-    padding-top: 100px; /* Ajusta este valor a la altura del navbar */
+    padding-top: 120px; /* Aumentado para dar más espacio */
 }
 
 /* Clases de botones */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
@@ -87,6 +88,7 @@ body {
     background-color: #6c24a7;
     color: white;
 }
+
 /* Efecto de teclado */
 .typing {
     white-space: nowrap;
@@ -118,6 +120,7 @@ body {
         border-color: #ffffff;
     }
 }
+
 /* Ajustes generales */
 body {
     font-family: 'Arial', sans-serif;
@@ -135,26 +138,58 @@ img {
 /* Botones */
 button {
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 0.75rem 1.5rem;
 }
 
 /* Responsividad general */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
     .contact-card {
-        margin-bottom: 20px; /* Agregar espacio entre elementos */
+        margin-bottom: 1rem; /* Agregar espacio entre elementos */
     }
 
     .form-control {
         font-size: 0.9rem; /* Reducir el tamaño en pantallas pequeñas */
     }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste del navbar en móviles */
+    body {
+        padding-top: 100px;
+    }
+
+    section {
+        scroll-margin-top: 100px;
+    }
 }
 
 @media (max-width: 576px) {
+    .container {
+        padding: 0 0.5rem; /* Reduce el padding general */
+    }
+
     h1, h2, h3 {
         font-size: 1.2rem; /* Ajusta títulos */
     }
 
-    .container {
-        padding: 0 10px; /* Reduce el padding general */
+    .btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    /* Ajuste del navbar en pantallas muy pequeñas */
+    body {
+        padding-top: 90px;
+    }
+
+    section {
+        scroll-margin-top: 90px;
     }
 }
